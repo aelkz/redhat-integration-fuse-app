@@ -24,7 +24,7 @@ amq:
   pwd: ${AMQ_PWD:admin}
 
 order:
-  queue: jmsSmartStart:order
+  queue: ${AMQ_QUEUE:jmsSmartStart:order}
 
 url:
   get:
