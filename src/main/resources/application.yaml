@@ -1,0 +1,32 @@
+logging:
+  config: classpath:logback.xml
+
+camel:
+  springboot:
+    name: fuse-app
+
+server:
+  address: 0.0.0.0
+  port: 8080
+
+management:
+  address: 0.0.0.0
+  port: 8081
+
+endpoints:
+  enabled: true
+  health:
+    enabled: true
+
+amq:
+  host: ${AMQ_HOST:tcp://localhost:61616}
+  user: ${AMQ_USER:admin}
+  pwd: ${AMQ_PWD:admin}
+
+order:
+  queue: jmsSmartStart:order
+
+url:
+  get:
+    products: ${EAP_PRODUCTS_REST_URI:jboss-javaee-app-apps.apps.sememeve.com/jboss-javaee-app-web/rest/products}
+    orders: ${EAP_ORDERS_REST_URI:jboss-javaee-app-apps.apps.sememeve.com/jboss-javaee-app-web/rest/orders}
