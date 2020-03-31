@@ -18,11 +18,9 @@ public class RROrderApi extends RouteBuilder {
                 .description("")
 
                 .post()
-
-                .consumes(MediaType.APPLICATION_JSON_VALUE)
-                .produces(MediaType.APPLICATION_JSON_VALUE)
-                .type(Order.class)
-
+                    .consumes(MediaType.APPLICATION_JSON_VALUE)
+                    .produces(MediaType.APPLICATION_JSON_VALUE)
+                    .type(Order.class)
                 .route()
                 .routeId("post-orders")
                 .to("direct:send-order-to-mom")
@@ -30,10 +28,8 @@ public class RROrderApi extends RouteBuilder {
                 .endRest()
 
                 .get("/all")
-
-                .consumes(MediaType.APPLICATION_JSON_VALUE)
-                .produces(MediaType.APPLICATION_JSON_VALUE)
-
+                    .consumes(MediaType.APPLICATION_JSON_VALUE)
+                    .produces(MediaType.APPLICATION_JSON_VALUE)
                 .route()
                 .routeId("get-orders")
                 .to("direct:get-orders")

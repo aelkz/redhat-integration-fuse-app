@@ -2,7 +2,6 @@ package br.com.redhat.route.internal;
 
 import br.com.redhat.model.Order;
 import br.com.redhat.util.RandomLongUtil;
-import org.apache.camel.Exchange;
 import org.apache.camel.ExchangePattern;
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.builder.RouteBuilder;

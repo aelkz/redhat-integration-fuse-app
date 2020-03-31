@@ -15,12 +15,9 @@ public class RRProductApi extends RouteBuilder {
     public void configure() throws Exception {
         rest("/products")
                 .description("")
-
                 .get("/all")
-
-                .consumes(MediaType.APPLICATION_JSON_VALUE)
-                .produces(MediaType.APPLICATION_JSON_VALUE)
-
+                    .consumes(MediaType.APPLICATION_JSON_VALUE)
+                    .produces(MediaType.APPLICATION_JSON_VALUE)
                 .route()
                 .routeId("get-products")
                 .to("direct:get-products")
